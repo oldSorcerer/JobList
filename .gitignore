@@ -1,0 +1,6 @@
+.idea
+*.iml
+*.class
+/target/
+/target/maven-status/
+/target/test-classes/
