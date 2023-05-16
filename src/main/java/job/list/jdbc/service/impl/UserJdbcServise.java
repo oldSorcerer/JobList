@@ -72,7 +72,7 @@ public class UserJdbcServise implements UserService {
     @Override
     public void deleteUserByPassport(String passport) throws SQLException {
         try (Connection connection = JdbcUtils.getConnection()) {
-            PreparedStatement statement = connection.prepareStatement("delete from userss where passport = ?"); //todo удалить из связанной таблицы
+            PreparedStatement statement = connection.prepareStatement("delete from users where passport = ?"); //todo удалить из связанной таблицы
             statement.setString(1, passport);
             int rowDeleted = statement.executeUpdate();
             System.out.println("Удалено позиций: " + rowDeleted);
